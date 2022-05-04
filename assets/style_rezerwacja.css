@@ -1,0 +1,213 @@
+*{
+    margin:0;
+}
+.con{
+    height: 175vh;
+    background-image: url("https://us.123rf.com/450wm/topvectors/topvectors1903/topvectors190302048/119607695-japanese-food-seamless-pattern-hand-drawn-on-chalkboard-vector-illustration-web-design.jpg?ver=6");
+    display:grid;
+    grid-template-rows: 140vh 35vh;
+    grid-template-areas: 
+    "main"
+    "footer";
+}
+.header-outer{
+    height: inherit;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.header{
+    position:sticky;
+    background-color: rgba(0, 0, 0, 0.712);
+    width:100%;
+    top:0;
+    left:0;
+    z-index: 100;
+    animation: animation-center 4s;
+    height: 6vh;
+}
+.menu-outer{
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-wrap:nowrap;
+}
+.menu-logo-outer{
+    width:15%;
+}
+.menu-menu{
+    height: 100%;
+    width:70%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-link,.menu-cart{
+    padding:30px;
+    text-decoration: none;
+    font-family: 'ABeeZee';
+    color:white;
+    cursor: pointer;
+    position:relative;
+    transition:450ms;
+}
+.menu-link:hover{
+    color:red;
+    font-size:1.2em;
+}
+.menu-cart-outer{
+    width:15%;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.menu-cart img{
+    height:75px;
+    width:75px;
+    color:white;
+}
+.menu-flag{
+    height:40px;
+    width:45px;
+    margin-right: 20px;
+}
+main{
+    height: 120vh;
+    position:relative;
+    width:50%;
+    left:25%;
+    top:7%;
+    background:rgb(255, 255, 235);
+    grid-area:main;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor:auto;
+}
+ main:before{
+    content:'';
+    position:absolute;
+    top: 1.25em;
+    bottom: 1.25em;
+    right: 1.25em;
+    left: 1.25em;
+    border-top:2px solid rgb(189, 18, 18);
+    border-bottom:2px solid rgb(189, 18, 18);
+    transform: scale(1.02,1);
+    animation:animation-border-top 2s;
+}
+ main:after{
+    content:'';
+    position:absolute;
+    top: 1.25em;
+    bottom: 1.25em;
+    right: 1.25em;
+    left: 1.25em;
+    border-left:2px solid rgb(189, 18, 18);
+    border-right:2px solid rgb(189, 18, 18);
+    transform: scale(1,1.02);
+    animation:animation-border-left 2s;
+}  
+.h1_body{
+    font-family: 'Alex Brush';
+    position:absolute;
+    top:5%;
+    font-size: 5em;
+    color:rgb(70, 70, 70);
+    border-bottom:3px solid rgb(189, 18, 18);
+    z-index:1;
+}
+.form{
+    z-index:1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 100%;
+}
+.form-group{
+    display:flex;
+    flex-direction: column;
+    width:60%;
+    margin-bottom:2em;
+}
+.form-group input{
+    height: 2.5em;
+}
+.form-group label{
+    font-family: 'ABeeZee';
+    margin-bottom: 0.5em;
+}
+.form > input{
+    width:130px;
+    height:50px;
+    background:rgb(189, 18, 18);
+    border:1px solid rgb(189, 18, 18);
+    color:whitesmoke;
+    font-family: 'ABeeZee';
+    font-size:1.1em;
+    cursor:pointer;
+}
+footer{
+    grid-area:footer;
+    background:rgb(70, 70, 70);
+}
+.footer-outer-1{
+    height: 90%;
+    margin-left: 15%;
+    margin-right: 20%;
+    display:flex;
+    justify-content: space-between;
+    color:whitesmoke;
+    opacity:0.85;
+    border-bottom:1px solid whitesmoke;
+}
+.footer-text-1,.footer-text-2,.footer-text-3{
+    font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif ;
+    margin-top:5%;
+    line-height: 1.5;
+}
+
+.footer-text-1 span,.footer-text-2 span,.footer-text-3 span{
+    font-size:1.2em;
+}
+.footer-facebook{
+    width:35px;
+    height:35px;
+    border-radius: 25%;
+}
+.footer-instagram{
+    width:35px;
+    height:35px;
+    margin-left:5%;
+}
+.footer-instagram,.footer-facebook{
+    margin-top: 10%;
+}
+.footer-outer-2{
+    margin-left:15%;
+    margin-top:8px;
+}
+.footer-outer-2 a{
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:rgb(88, 12, 12);
+}
+@keyframes animation-border-top{
+    0%{
+        transform:scale(0,1)
+    }
+    100%{
+        transform:scale(1.02.1)
+    }
+}
+@keyframes animation-border-left{
+    0%{
+        transform:scale(1,0)
+    }
+    100%{
+        transform:scale(1.1.02)
+    }
+}
