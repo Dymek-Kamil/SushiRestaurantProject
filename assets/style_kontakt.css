@@ -2,10 +2,10 @@
     margin:0;
 }
 .con{
-    height: 175vh;
+    height: 135vh;
     background-image: url("https://us.123rf.com/450wm/topvectors/topvectors1903/topvectors190302048/119607695-japanese-food-seamless-pattern-hand-drawn-on-chalkboard-vector-illustration-web-design.jpg?ver=6");
     display:grid;
-    grid-template-rows: 140vh 35vh;
+    grid-template-rows: 100vh 35vh;
     grid-template-areas: 
     "main"
     "footer";
@@ -72,84 +72,38 @@
     width:45px;
     margin-right: 20px;
 }
-main{
-    height: 120vh;
-    position:relative;
-    width:50%;
-    left:25%;
-    top:7%;
-    background:rgb(255, 255, 235);
-    grid-area:main;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    cursor:auto;
-}
- main:before{
-    content:'';
-    position:absolute;
-    top: 1.25em;
-    bottom: 1.25em;
-    right: 1.25em;
-    left: 1.25em;
-    border-top:2px solid rgb(189, 18, 18);
-    border-bottom:2px solid rgb(189, 18, 18);
-    transform: scale(1.02,1);
-    animation:animation-border-top 2s;
-}
- main:after{
-    content:'';
-    position:absolute;
-    top: 1.25em;
-    bottom: 1.25em;
-    right: 1.25em;
-    left: 1.25em;
-    border-left:2px solid rgb(189, 18, 18);
-    border-right:2px solid rgb(189, 18, 18);
-    transform: scale(1,1.02);
-    animation:animation-border-left 2s;
-}  
-.h1_body{
-    font-family: 'Alex Brush';
-    position:absolute;
-    top:5%;
-    font-size: 5em;
-    color:rgb(70, 70, 70);
-    border-bottom:3px solid rgb(189, 18, 18);
-    z-index:1;
-}
-.form{
-    z-index:1;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.kontakt_outer{
     width:100%;
-    height: 100%;
+    height: 100vh;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
 }
-.form-group{
+.kontakt_telefon,.kontakt_lokalizacja,.kontakt_godziny{
+    position:relative;
+    top:-15%;
+    height: 25%;
+    width:20%;
+    background:whitesmoke;
+    border-radius: 10%;
     display:flex;
     flex-direction: column;
-    width:60%;
-    margin-bottom:2em;
+    align-items:center;
 }
-.form-group input{
-    height: 2.5em;
+.kontakt_telefon p,.kontakt_lokalizacja p,.kontakt_godziny p{
+    line-height: 2;
+    font-family: 'Dancing Script';
+    font-size:2.5em;
+    font-weight: bolder;
 }
-.form-group label{
-    font-family: 'ABeeZee';
-    margin-bottom: 0.5em;
+.kontakt-text{
+    font-size:1.4em;
+    font-family: 'Times New Roman', Times, serif;
 }
-.form > input{
-    width:130px;
-    height:50px;
-    background:rgb(189, 18, 18);
-    border:1px solid rgb(189, 18, 18);
-    color:whitesmoke;
-    font-family: 'ABeeZee';
-    font-size:1.1em;
-    cursor:pointer;
+iframe{
+    position:absolute;
+    top:55%;
+    width:100%;
 }
 footer{
     grid-area:footer;
@@ -194,33 +148,4 @@ footer{
 .footer-outer-2 a{
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color:rgb(88, 12, 12);
-}
-.menu_body{
-    position:absolute;
-    top:20%;
-    width:80%;
-    height: 80%;
-}
-.menu_body p{
-    margin-bottom:1em;
-}
-.menu_h3{
-    font-family: 'ABeeZee';
-    margin-bottom: 0.3em;
-}
-@keyframes animation-border-top{
-    0%{
-        transform:scale(0,1)
-    }
-    100%{
-        transform:scale(1.02.1)
-    }
-}
-@keyframes animation-border-left{
-    0%{
-        transform:scale(1,0)
-    }
-    100%{
-        transform:scale(1.1.02)
-    }
 }
